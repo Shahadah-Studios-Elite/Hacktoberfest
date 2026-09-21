@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahadah_Studios No-JS Companion</title>
+  <style>
+    /* --- COLOR VARIABLES --- */
+    :root {
+      --bg-black: #0d0e12;      /* Deep dark background */
+      --card-bg: #161920;       /* Card background */
+      --neon-green: #39ff14;    /* Neon Green for active code */
+      --neon-orange: #ff5e00;   /* Neon Orange for badges and highlights */
+      --neon-blue: #00f0ff;     /* Neon Blue for borders and glows */
+      --text-gray: #a0a5b5;     /* Soft gray for standard text */
+    }
+
+    /* --- GLOBAL STYLES --- */
+    body {
+      background-color: var(--bg-black);
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: var(--text-gray);
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+
+    /* --- CODE CARD CONTAINER --- */
+    .code-card {
+      background-color: var(--card-bg);
+      border: 2px solid #232733;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.2rem;
+    }
+
+    /* Badge Styles */
+    .badge {
+      background-color: transparent;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge.orange {
+      border: 1px solid var(--neon-orange);
+      color: var(--neon-orange);
+      text-shadow: 0 0 5px var(--neon-orange);
+    }
+
+    .badge.blue {
+      border: 1px solid var(--neon-blue);
+      color: var(--neon-blue);
+      text-shadow: 0 0 5px var(--neon-blue);
+    }
+
+    /* --- THE POWERFUL CSS-ONLY CLICK BOX --- */
+    .code-box {
+      background-color: #050608;
+      border: 1px solid var(--neon-blue);
+      color: var(--neon-green);
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      cursor: pointer;
+      white-space: pre;
+      margin: 0 0 8px 0;
+      transition: all 0.3s ease;
+
+      /* THIS IS THE MAGIC COMMAND! */
+      -webkit-user-select: all;  /* For Safari */
+      user-select: all;          /* Selects all text on a single click */
+    }
+
+    /* Glow effect on Hover */
+    .code-box:hover {
+      box-shadow: 0 0 15px var(--neon-blue);
+      border-color: var(--neon-orange);
+    }
+
+    /* Quick helper tip under the box */
+    .click-tip {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Code snipper</h1>
+  <div class="subtitle">For the HACKTOBER FEST</div>
+
+  <!-- Snippet Card 1: HTML -->
+  <div class="code-card">
+    <div class="card-header">
+      <h3>HTML Skeleton</h3>
+      <span class="badge orange">HTML5</span>
+    </div>
+    <pre class="code-box"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Project&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <div class="click-tip">Click once to highlight all, then press Ctrl+C</div>
+  </div>
+
+  <!-- Snippet Card 2: CSS -->
+  <div class="code-card">
+    <div class="card-header">
+      <h3>Cyberpunk Glow Effect</h3>
+      <span class="badge blue">CSS3</span>
+    </div>
+    <pre class="code-box"><code>.glow-text {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}</code></pre>
+    <div class="click-tip">Click once to highlight all, then press Ctrl+C</div>
+  </div>
+
+</body>
+</html>
